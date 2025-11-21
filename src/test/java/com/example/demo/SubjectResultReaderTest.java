@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class SubjectResultReaderTest {
@@ -18,6 +19,7 @@ class SubjectResultReaderTest {
 	 * @throws IOException
 	 */
 	@Test
+	@DisplayName("CSVファイルを読み込むテスト testRead()")
 	void testRead() throws IOException {
 		InputStream is = getClass().getResourceAsStream("SubjectResultReaderPtn1.csv");
 		SubjectResultReader srr = new SubjectResultReader();
@@ -51,6 +53,7 @@ class SubjectResultReaderTest {
 	 * @throws IOException
 	 */
 	@Test
+	@DisplayName("0件のCSVファイルを読み込むテスト testRead2()")
 	void testRead2() throws IOException {
 		InputStream is = getClass().getResourceAsStream("SubjectResultReaderPtn2.csv");
 		SubjectResultReader srr = new SubjectResultReader();
